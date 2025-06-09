@@ -1,4 +1,4 @@
-#  Laboratório 01 - Instalação do Ubuntu 20.04 no Windows Subsystem for Linux 2 (WSL2) e ferramentas de desenvolvimento
+#  Laboratório 01 - Instalação do Ubuntu 24.04 no Windows Subsystem for Linux 2 (WSL2) e ferramentas de desenvolvimento
 
 ## 1. Objetivos
 
@@ -19,10 +19,8 @@ Esse guia cobre as instalação das seguintes ferramentas:
 * Windows 10 versão 2004 ou superior;
 * Conhecimento básico da utilização de sistemas Linux;
 
-Este documento assume que você esteja utilizando o Windows 10 versão 2004 ou
-superior (Build 19041 ou superior) ou o Windows 11. Caso esteja utilizando uma
-versão mais antiga do Windows 10 é recomendavél que você faça a atualização.
-Caso não seja possível você ainda poderá instalar o WSL, consulte a referência
+Este documento assume que você esteja utilizando o Windows 10 versão 2004 ou superior (Build 19041 ou superior) ou o Windows 11. Caso esteja utilizando uma
+versão mais antiga do Windows 10 é recomendavél que você faça a atualização. Caso não seja possível você ainda poderá instalar o WSL, consulte a referência
 
 ## 3. Referências
 
@@ -46,19 +44,17 @@ Para compilar, testar e depurar códigos embarcados é necessário preparar corr
 
 ### 4.1 Instalação e configuração do Ubuntu no WSL2
 
-Para o Windows 10 versão 2004 e superiores o processo de instalação do WSL é realizado de forma automática. Para isso, abra o *Windows PowerShell* como
-administrador.
+Para o Windows 10 versão 2004 e superiores o processo de instalação do WSL é realizado de forma automática. Para isso, abra o *Windows PowerShell* como administrador.
 
 ![Windows PowerShell](./images/pshell-admin.png "Windows PowerShell")
 
-O WSL permite escolher, entre as opções disponíveis, a distribuição Linux de sua preferência. Para ver uma lista das distribuições disponíveis
-digite o comando:
+O WSL permite escolher, entre as opções disponíveis, a distribuição Linux de sua preferência. Para ver uma lista das distribuições disponíveis digite o comando:
 
 ```console
 PS > wsl --list --online
 ```
 
-Em seguida, instale a distribuição desejada usando **wsl --install -d <Distro>**. Neste curso será utilizada a distribuição **Ubuntu 24.04 LTS**. Caso opte por uma distribuição diferente será necessário adaptar as instruções fornecidas.
+Em seguida, instale a distribuição desejada usando **wsl --install -d <Distro>**. Neste curso será utilizada a distribuição **Ubuntu 24.04**. Caso opte por uma distribuição diferente será necessário adaptar as instruções fornecidas.
 
 ![Windows PowerShell](./images/pshell-distros.png "Distribuições Linux disponíveis no WSL2")
 
@@ -409,7 +405,7 @@ foo@bar$ lsusb
 foo@bar$ ls -l /dev/bus/usb/001/004
 ```
 
-![Ubuntu terminal](images/ubuntu-usb-perm-new.jpg "Ubuntu terminal")
+![Ubuntu terminal](images/ubuntu-usb-perm.jpg "Ubuntu terminal")
 
 Como pôde notar os direitos de acesso foram alterados de forma que qualquer
 usuário tenha acesso a leitura e escrita no dispositivo ST-LINK.
