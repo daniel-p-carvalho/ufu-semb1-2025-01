@@ -4,12 +4,32 @@
 
 Este documento tem como objetivo orientar a preparação do ambiente de desenvolvimento utilizado na disciplina Sistemas Embarcados 1. A proposta é configurar uma infraestrutura baseada na distribuição Ubuntu, executada no Windows por meio do WSL2 (Windows Subsystem for Linux), e instalar ferramentas fundamentais para o desenvolvimento de sistemas embarcados.
 
+Utilizar o Ubuntu no WSL2 como ambiente de desenvolvimento para sistemas embarcados oferece várias vantagens significativas:
+
+* Ferramentas de Desenvolvimento Linux: Muitos ambientes de desenvolvimento integrado (IDEs) e ferramentas para sistemas embarcados são nativamente suportados em Linux. No WSL2, você pode facilmente instalar e utilizar ferramentas como o GCC para *cross-compiling*, Make, CMake, OpenOCD, entre outras, sem a necessidade de configuração complexa.
+
+* Ambiente Consistente: Ter um ambiente Linux completo permite que você recrie facilmente o mesmo ambiente de desenvolvimento em diferentes máquinas, o que é crucial para times trabalhando em projetos embarcados.
+
+* Scripts e Automatização: Você pode tirar proveito de scripts bash para automatizar processos, como build, deploy e testes, o que é particularmente útil em fluxos de trabalho complexos em sistemas embarcados.
+
+* Supporte para Ferramentas de Desenvolvimento de Firmware: Muitas ferramentas de desenvolvimento de firmware, como aquelas oferecidas por **ARM**, incluindo CMSIS e drivers, são bem suportadas em Linux.
+
+* Acesso Facilitado a Repositórios Git: Com o WSL2, a integração com o Git é direta e poderosa, permitindo o gerenciamento eficiente do código-fonte durante o desenvolvimento de sistemas embarcados.
+
+* Simulação e Teste: Ferramentas de simulação para hardware, como QEMU, trabalham bem em ambientes Linux e podem ser integradas no WSL2, permitindo que você simule plataformas embarcadas como parte de seu fluxo de trabalho de desenvolvimento.
+
+* Gestão de Dependências: Com o gerenciador de pacotes APT, é simples instalar bibliotecas e dependências necessárias para o desenvolvimento de sistemas embarcados, facilitando o setup do ambiente.
+
+* Interoperabilidade com o Windows: Você pode desenvolver no Ubuntu e testar ou depurar usando ferramentas disponíveis no Windows, como editores gráficos ou ferramentas de análise, sem precisar de máquinas virtuais adicionais ou infraestruturas complexas.
+
+* Menor *Overhead* de Sistema: Não há necessidade de rodar uma máquina virtual completa, economizando recursos e facilitando a troca rápida entre tarefas em Windows e Linux.
+
 Esse guia cobre as instalação das seguintes ferramentas:
 
 * Windows Subsystem for Linux 2;
 * Sistema de controle de versões Git; 
 * GCC - GNU C Compiler;
-* Stlink tools;
+* ST-LINK tools;
 * GCC ARM Toolchain;
 * OpenOCD - Open On Chip Debugger;
 * Microsoft Visual Studio Code;
